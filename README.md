@@ -37,9 +37,9 @@ This document provides a guide for setting up and running ESMFold on the Snelliu
    ```
 
    Get the script for running ESMFold.
-   
+
    ```
-   git clone git@github.com:sara-nl/ESMFold_Snellius.git
+   git clone https://github.com/sara-nl/ESMFold_Snellius.git
    cd ESMFold_Snellius
    ```
 
