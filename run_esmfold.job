@@ -1,0 +1,25 @@
+#!/bin/bash
+#SBATCH --job-name=my_job
+#SBATCH --nodes=1
+#SBATCH --time=00:10:00
+#SBATCH --partition gpu
+#SBATCH --gpus 1
+#SBATCH --ntasks 1
+#SBATCH --cpus-per-task 8
+
+# load environment
+source ../venv/bin/activate
+module load 2022 
+module load cuDNN/8.6.0.163-CUDA-11.8.0 
+cd ./esmfold/
+
+# arguments
+
+# multiple fastas
+# The script detects whether a fasta contains a multimer
+# these are also the only two arg options 
+cmd_args="--fastas_folder ../../../outputs/proteinmpnn/seqs/ 
+--output_folder ../../../outputs/esmfold/"
+
+# run algorithm
+python esmfold.py ${cmd_args}
