@@ -36,6 +36,13 @@ This document provides a guide for setting up and running ESMFold on the Snelliu
    pip install transformers py3Dmol accelerate
    ```
 
+   Get the script for running ESMFold.
+   
+   ```
+   git clone git@github.com:sara-nl/ESMFold_Snellius.git
+   cd ESMFold_Snellius
+   ```
+
 ### Additional Setup Notes
 - ESMFold requires CUDA-compatible GPUs for efficient computation. Ensure that the Slurm partition you choose has GPU resources available.
 - The installation steps assume the use of CUDA 11.8 and cuDNN 8.6.0.163 modules. Adjust these as necessary based on the available resources on Snellius.
